@@ -6,7 +6,6 @@ const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 
 //need to install
-let request = require('request')
 let querystring = require('querystring')
 
 const app = express()
@@ -32,9 +31,9 @@ app.use(function errorHandler(error, req, res, next) {
     res.status(500).json(response)
 })
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello, world!')
+// })
 
 app.get('/login', function(req, res) {
     res.redirect('https://accounts.spotify.com/authorize?' +
