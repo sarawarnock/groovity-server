@@ -7,7 +7,9 @@ const jsonParser = express.json();
 
 //need to install
 const querystring = require("querystring");
-const redirect_uri = process.env.REDIRECT || "http://localhost:8000/callback";
+//const redirect_uri = process.env.REDIRECT || "http://localhost:8000/callback";
+//const redirect_uri = encodeURI("http://localhost:8000/callback")
+const redirect_uri = "http://localhost:8000/callback"
 
 // app.get('/login', function(req, res) {
 //     res.redirect('https://accounts.spotify.com/authorize?' +
